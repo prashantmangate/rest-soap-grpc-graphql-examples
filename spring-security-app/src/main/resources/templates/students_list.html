@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Spring Security Application | Student List</title>
+</head>
+<body>
+   <table>
+        <thead>
+        <th scope="col">Student Number</th>
+        <th scope="col">Student Name</th>
+        </thead>
+        <tbody>
+        <tr><td></td><td></td></tr>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.studentId}">Name</td>
+            <td th:text="${student.name}"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

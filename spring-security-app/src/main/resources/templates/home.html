@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Register User </title>
+</head>
+<body>
+
+<p><a th:href="@{/students}">View Students</a> | <a th:href="@{/subjects/0/10}">View Subjects</a> | <a th:href="@{/examResults}">View Exam Results</a></p>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+-->
+</body>
+</html>

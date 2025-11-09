@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Spring Security Application | Subject List</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th scope="col">Subject Number</th>
+    <th scope="col">Subject Name</th>
+    <th scope="col">Tutor</th>
+    </thead>
+    <tbody>
+    <tr><td></td><td></td></tr>
+    <tr th:each="subject : ${subjects}">
+        <td th:text="${subject.subjectId}">Name</td>
+        <td th:text="${subject.subjectName}"></td>
+        <td th:text="${subject.tutor}"></td>
+    </tr>
+    <tr>
+        <td ></td>
+        <td><a th:href="@{'/subjects/'+${prev}+'/'+10}"><< Previous</a> | <a th:href="@{'/subjects/'+${next}+'/'+10}">Next >></a></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

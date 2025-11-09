@@ -1,0 +1,23 @@
+package com.springsecuritydemo.springsecurityapp.webconfig;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class MvcConfig implements WebMvcConfigurer {
+
+    public void addViewControllers(ViewControllerRegistry registry){
+
+        registry.addViewController("/subjects").setViewName("subject_list");
+        registry.addViewController("/students").setViewName("students_list");
+        registry.addViewController("/subjects").setViewName("subject_list");
+        registry.addViewController("/examResults").setViewName("exam_result");
+        registry.addViewController("/success").setViewName("success");
+        registry.addViewController("/home").setViewName("home");
+        registry.addViewController("/register").setViewName("register_user");
+        registry.addViewController("/").setViewName("home");
+        registry.addViewController("/about").setViewName("about");
+        registry.addViewController("/login").setViewName("login");
+    }
+}

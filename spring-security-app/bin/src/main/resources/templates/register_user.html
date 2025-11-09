@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Register User </title>
+</head>
+<body>
+<!--<div th:if="${param.error}">
+  Invalid username and password.
+</div>-->
+<form th:action="@{/create}" method="post" th:object="${user}" enctype="multipart/form-data">
+  <div><label> First Name : <input type="text" name="firstName"/> </label></div>
+  <div><label> Last Name : <input type="text" name="lastName"/> </label></div>
+  <div><label> Email : <input type="email" name="email"/> </label></div>
+  <div><label> Mobile : <input type="number" name="mobile"/> </label></div>
+  <div><label> Date of Birth(Optional) : <input type="date" name="dob"/> </label></div>
+  <div><label> User Name : <input type="text" name="userName"/> </label></div>
+  <div><label> Password: <input type="password" name="password"/> </label></div>
+  <div><input type="submit" value="Register"/></div>
+</form>
+</body>
+</html>
